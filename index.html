@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #1a1a1a;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .star {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background-color: white;
+        border-radius: 50%;
+        animation: twinkle 2s linear infinite;
+      }
+      @keyframes twinkle {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://i.postimg.cc/vHxjfkBk/logo-vector.png" alt="Logo">
+    <div class="stars"></div>
+    <script>
+      const starCount = 50;
+      const starWrapper = document.querySelector(".stars");
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        star.style.top = `${Math.floor(Math.random() * 100)}vh`;
+        star.style.animationDelay = `${Math.random()}s`;
+        starWrapper.appendChild(star);
+      }
+
+      function changeStarPosition(star) {
+        star.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        star.style.top = `${Math.floor(Math.random() * 100)}vh`;
+        setTimeout(() => {
+          changeStarPosition(star);
+        }, Math.floor(Math.random() * 4000) + 2000);
+      }
+
+      const stars = document.querySelectorAll(".star");
+      stars.forEach(star => {
+        changeStarPosition(star);
+      });
+    </script>
+  </body>
+</html>
