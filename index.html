@@ -1,5 +1,6 @@
 <html>
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
         background-color: #1a1a1a;
@@ -16,7 +17,13 @@
         background-color: white;
         border-radius: 50%;
         animation: twinkle 2s linear infinite;
+		
       }
+	  .responsive {
+		max-width: 80%;
+		height: auto;
+		
+	  }
       @keyframes twinkle {
         0% {
           opacity: 1;
@@ -31,7 +38,7 @@
     </style>
   </head>
   <body>
-    <img src="https://i.postimg.cc/vHxjfkBk/logo-vector.png" alt="Logo">
+    <img src="https://i.postimg.cc/vHxjfkBk/logo-vector.png" class="responsive">
     <div class="stars"></div>
     <script>
       const starCount = 50;
