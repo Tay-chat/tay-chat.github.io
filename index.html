@@ -2,43 +2,47 @@
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      body {
-           
-		background-image: url('https://i.postimg.cc/jSqtwJZr/website-background-dark.png');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-        height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .star {
-        position: absolute;
-        width: 3px;
-        height: 3px;
-        background-color: white;
-        border-radius: 50%;
-        animation: twinkle 2s linear infinite;
-		
-      }
-	  .responsive {
-		max-width: 80%;
-		height: auto;
-		
-	  }
-      @keyframes twinkle {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.1;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
+   body {
+    background-image: url('https://i.postimg.cc/jSqtwJZr/website-background-dark.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 2s linear infinite;
+}
+.responsive {
+    max-width: 80%;
+    height: auto;
+}
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('https://i.postimg.cc/13ScpyqS/website-background-dark-mobile.png');
+    }
+}
+
     </style>
   </head>
   <body>
